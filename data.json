@@ -1,0 +1,272 @@
+[
+    {
+        "delivery": "Logo & Identity",
+        "team": "UI/UX",
+        "status": "Done"
+    },
+    {
+        "delivery": "Low Fidelity Wireframes",
+        "team": "UI/UX",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Mid Fidelity Prototypes",
+        "team": "UI/UX",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "High Fidelity Designs",
+        "team": "UI/UX",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "API Gateway/BFF Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Auth/Identity Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "User/Profile Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Catalog Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Media/Asset Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Inventory Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Pricing Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Payment Gateway Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Notification Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Chat Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "File Upload Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Event/Activity Service",
+        "team": "Backend",
+        "status": "Available"
+    },
+    {
+        "delivery": "Promotion/Coupon Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Recommendation Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Review/Ratings Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Wishlist Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Cart Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Checkout/Order Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Loyalty Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Search Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Chat Bot Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "CMS/Content Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Shipping/Fulfillment Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Admin API Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Analytics/Reporting Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "AI Face Scanner Service",
+        "team": "Backend",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Login & Onboarding Screen",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "App Walkthrough/Tutorial",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Home Screen",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Product Catalog & Details",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Shopping Cart & Checkout",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "User Profile & Orders",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Product Reviews & Ratings",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Customer Support Chat",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "AI Face Scanner",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Android App (Kotlin)",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "iOS App (SwiftUI)",
+        "team": "Mobile",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "CMS Core Foundation",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "CMS Inventory Management",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "CMS Reports & Analytics",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "CMS Advanced Features",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Product Catalog Management",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Stock Management Dashboard",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Sales Analytics Dashboard",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Customer Analytics Dashboard",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "AI Face Scanner Analytics",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Content Management Tools",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "Marketing Campaign Tools",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "User Management Interface",
+        "team": "CMS",
+        "status": "Backlog"
+    },
+    {
+        "delivery": "System Configuration Panel",
+        "team": "CMS",
+        "status": "Backlog"
+    }
+]

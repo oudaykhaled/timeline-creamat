@@ -1,0 +1,434 @@
+[
+    {
+        "delivery": "Logo & Identity",
+        "team": "UI/UX",
+        "status": "Pending",
+        "timeline": "Week 1-2",
+        "priority": "High",
+        "dependencies": []
+    },
+    {
+        "delivery": "Low Fidelity Wireframes",
+        "team": "UI/UX",
+        "status": "Pending",
+        "timeline": "Week 3-4",
+        "priority": "High",
+        "dependencies": ["Logo & Identity"]
+    },
+    {
+        "delivery": "Mid Fidelity Prototypes",
+        "team": "UI/UX",
+        "status": "Pending",
+        "timeline": "Week 5-6",
+        "priority": "High",
+        "dependencies": ["Low Fidelity Wireframes"]
+    },
+    {
+        "delivery": "High Fidelity Designs",
+        "team": "UI/UX",
+        "status": "Pending",
+        "timeline": "Week 7-8",
+        "priority": "High",
+        "dependencies": ["Mid Fidelity Prototypes"]
+    },
+    {
+        "delivery": "API Gateway/BFF Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "High",
+        "dependencies": []
+    },
+    {
+        "delivery": "Auth/Identity Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "High",
+        "dependencies": []
+    },
+    {
+        "delivery": "User/Profile Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "High",
+        "dependencies": []
+    },
+    {
+        "delivery": "Catalog Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "High",
+        "dependencies": []
+    },
+    {
+        "delivery": "Media/Asset Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "Medium",
+        "dependencies": []
+    },
+    {
+        "delivery": "Inventory Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "High",
+        "dependencies": []
+    },
+    {
+        "delivery": "Pricing Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "High",
+        "dependencies": []
+    },
+    {
+        "delivery": "Payment Gateway Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "High",
+        "dependencies": []
+    },
+    {
+        "delivery": "Notification Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "Medium",
+        "dependencies": []
+    },
+    {
+        "delivery": "Chat Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "Medium",
+        "dependencies": []
+    },
+    {
+        "delivery": "File Upload Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "Medium",
+        "dependencies": []
+    },
+    {
+        "delivery": "Event/Activity Service",
+        "team": "Backend",
+        "status": "Available",
+        "timeline": "Available",
+        "priority": "Medium",
+        "dependencies": []
+    },
+    {
+        "delivery": "Promotion/Coupon Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 5-8",
+        "priority": "High",
+        "dependencies": ["Catalog Service", "Pricing Service"]
+    },
+    {
+        "delivery": "Recommendation Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 9-16",
+        "priority": "High",
+        "dependencies": ["User/Profile Service", "Catalog Service"]
+    },
+    {
+        "delivery": "Review/Ratings Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 5-8",
+        "priority": "High",
+        "dependencies": ["User/Profile Service", "Catalog Service"]
+    },
+    {
+        "delivery": "Wishlist Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 1-4",
+        "priority": "Medium",
+        "dependencies": ["User/Profile Service", "Catalog Service"]
+    },
+    {
+        "delivery": "Cart Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 1-4",
+        "priority": "High",
+        "dependencies": ["User/Profile Service", "Catalog Service"]
+    },
+    {
+        "delivery": "Checkout/Order Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 1-4",
+        "priority": "High",
+        "dependencies": ["Cart Service", "Payment Gateway Service"]
+    },
+    {
+        "delivery": "Loyalty Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 13-18",
+        "priority": "Medium",
+        "dependencies": ["User/Profile Service", "Checkout/Order Service"]
+    },
+    {
+        "delivery": "Search Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 5-8",
+        "priority": "High",
+        "dependencies": ["Catalog Service"]
+    },
+    {
+        "delivery": "Chat Bot Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 13-16",
+        "priority": "Low",
+        "dependencies": ["Chat Service"]
+    },
+    {
+        "delivery": "CMS/Content Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 5-8",
+        "priority": "Medium",
+        "dependencies": ["Catalog Service"]
+    },
+    {
+        "delivery": "Shipping/Fulfillment Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 9-12",
+        "priority": "Medium",
+        "dependencies": ["Checkout/Order Service"]
+    },
+    {
+        "delivery": "Admin API Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 5-8",
+        "priority": "High",
+        "dependencies": ["All Core Services"]
+    },
+    {
+        "delivery": "Analytics/Reporting Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 9-12",
+        "priority": "Medium",
+        "dependencies": ["All Core Services"]
+    },
+    {
+        "delivery": "AI Face Scanner Service",
+        "team": "Backend",
+        "status": "Pending",
+        "timeline": "Week 13-20",
+        "priority": "Medium",
+        "dependencies": ["User/Profile Service", "Catalog Service"]
+    },
+    {
+        "delivery": "Login & Onboarding Screen",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 1-4",
+        "priority": "High",
+        "dependencies": ["High Fidelity Designs", "Auth/Identity Service"]
+    },
+    {
+        "delivery": "App Walkthrough/Tutorial",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 1-4",
+        "priority": "High",
+        "dependencies": ["High Fidelity Designs"]
+    },
+    {
+        "delivery": "Home Screen",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 1-4",
+        "priority": "High",
+        "dependencies": ["High Fidelity Designs", "Catalog Service"]
+    },
+    {
+        "delivery": "Product Catalog & Details",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 1-4",
+        "priority": "High",
+        "dependencies": ["High Fidelity Designs", "Catalog Service", "Media/Asset Service"]
+    },
+    {
+        "delivery": "Shopping Cart & Checkout",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 1-4",
+        "priority": "High",
+        "dependencies": ["High Fidelity Designs", "Cart Service", "Checkout/Order Service"]
+    },
+    {
+        "delivery": "User Profile & Orders",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 5-8",
+        "priority": "High",
+        "dependencies": ["High Fidelity Designs", "User/Profile Service"]
+    },
+    {
+        "delivery": "Product Reviews & Ratings",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 5-8",
+        "priority": "High",
+        "dependencies": ["High Fidelity Designs", "Review/Ratings Service"]
+    },
+    {
+        "delivery": "Customer Support Chat",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 9-12",
+        "priority": "Medium",
+        "dependencies": ["High Fidelity Designs", "Chat Service"]
+    },
+    {
+        "delivery": "AI Face Scanner",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 13-18",
+        "priority": "Medium",
+        "dependencies": ["High Fidelity Designs", "AI Face Scanner Service"]
+    },
+    {
+        "delivery": "Android App (Kotlin)",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 1-16",
+        "priority": "High",
+        "dependencies": ["All Mobile Components"]
+    },
+    {
+        "delivery": "iOS App (SwiftUI)",
+        "team": "Mobile",
+        "status": "Pending",
+        "timeline": "Week 1-16",
+        "priority": "High",
+        "dependencies": ["All Mobile Components"]
+    },
+    {
+        "delivery": "CMS Core Foundation",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 1-3",
+        "priority": "High",
+        "dependencies": ["Admin API Service"]
+    },
+    {
+        "delivery": "CMS Inventory Management",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 4-6",
+        "priority": "High",
+        "dependencies": ["CMS Core Foundation", "Catalog Service", "Inventory Service"]
+    },
+    {
+        "delivery": "CMS Reports & Analytics",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 7-9",
+        "priority": "Medium",
+        "dependencies": ["CMS Inventory Management", "Analytics/Reporting Service"]
+    },
+    {
+        "delivery": "CMS Advanced Features",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 10-12",
+        "priority": "Medium",
+        "dependencies": ["CMS Reports & Analytics"]
+    },
+    {
+        "delivery": "Product Catalog Management",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 4-6",
+        "priority": "High",
+        "dependencies": ["CMS Core Foundation", "Catalog Service"]
+    },
+    {
+        "delivery": "Stock Management Dashboard",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 4-6",
+        "priority": "High",
+        "dependencies": ["CMS Core Foundation", "Inventory Service"]
+    },
+    {
+        "delivery": "Sales Analytics Dashboard",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 7-9",
+        "priority": "Medium",
+        "dependencies": ["CMS Inventory Management", "Analytics/Reporting Service"]
+    },
+    {
+        "delivery": "Customer Analytics Dashboard",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 7-9",
+        "priority": "Medium",
+        "dependencies": ["CMS Inventory Management", "User/Profile Service"]
+    },
+    {
+        "delivery": "AI Face Scanner Analytics",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 10-12",
+        "priority": "Low",
+        "dependencies": ["CMS Reports & Analytics", "AI Face Scanner Service"]
+    },
+    {
+        "delivery": "Content Management Tools",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 10-12",
+        "priority": "Medium",
+        "dependencies": ["CMS Reports & Analytics", "CMS/Content Service"]
+    },
+    {
+        "delivery": "Marketing Campaign Tools",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 10-12",
+        "priority": "Medium",
+        "dependencies": ["CMS Reports & Analytics", "Promotion/Coupon Service"]
+    },
+    {
+        "delivery": "User Management Interface",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 7-9",
+        "priority": "Medium",
+        "dependencies": ["CMS Inventory Management", "User/Profile Service"]
+    },
+    {
+        "delivery": "System Configuration Panel",
+        "team": "CMS",
+        "status": "Pending",
+        "timeline": "Week 10-12",
+        "priority": "Medium",
+        "dependencies": ["CMS Reports & Analytics"]
+    }
+]
