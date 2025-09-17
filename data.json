@@ -22,62 +22,62 @@
     {
         "delivery": "API Gateway/BFF Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Auth/Identity Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "User/Profile Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Catalog Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Media/Asset Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Inventory Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Pricing Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Payment Gateway Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Notification Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Chat Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "File Upload Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Event/Activity Service",
         "team": "Backend",
-        "status": "Available"
+        "status": "Done"
     },
     {
         "delivery": "Promotion/Coupon Service",
