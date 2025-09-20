@@ -407,7 +407,7 @@
             .dashboard-header h1 {
                 font-size: 2em;
             }
-
+            
         // Initialize dashboard
         function initDashboard() {
             renderDeliverables();
@@ -1040,27 +1040,27 @@
                 <h2 class="section-title">📅 Project Timeline</h2>
                 <p style="color: #666; margin-bottom: 20px;">
                     <strong>Kremati E-commerce Flutter Mobile Application</strong><br>
-                    4-month development project • Started: September 6, 2025 • Expected completion: May 6, 2026
+                    4-month development project • Started: September 6, 2025 • Expected completion: January 6, 2026
                 </p>
                 
                 <div class="timeline-container">
                     <div class="timeline-line"></div>
                     <div class="timeline-items">
-                        <div class="timeline-item completed" onclick="openDeliverableModal('phase1')">
+                        <div class="timeline-item current" onclick="openDeliverableModal('phase1')">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-title">Phase 1: Foundation</div>
-                                <div class="timeline-date">Sep 6 - Nov 5, 2025</div>
-                                <div class="timeline-status completed">Completed</div>
+                                <div class="timeline-date">Sep 6 - Oct 5, 2025</div>
+                                <div class="timeline-status current">In Progress</div>
                             </div>
                         </div>
                         
-                        <div class="timeline-item current" onclick="openDeliverableModal('phase2')">
+                        <div class="timeline-item upcoming" onclick="openDeliverableModal('phase2')">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-title">Phase 2: Core Mobile</div>
-                                <div class="timeline-date">Nov 6, 2025 - Jan 5, 2026</div>
-                                <div class="timeline-status current">In Progress</div>
+                                <div class="timeline-date">Oct 6 - Nov 5, 2025</div>
+                                <div class="timeline-status upcoming">Upcoming</div>
                             </div>
                         </div>
                         
@@ -1068,7 +1068,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-title">Phase 3: Features</div>
-                                <div class="timeline-date">Jan 6 - Mar 6, 2026</div>
+                                <div class="timeline-date">Nov 6 - Dec 5, 2025</div>
                                 <div class="timeline-status upcoming">Upcoming</div>
                             </div>
                         </div>
@@ -1077,7 +1077,7 @@
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-title">Phase 4: Launch</div>
-                                <div class="timeline-date">Mar 7 - May 6, 2026</div>
+                                <div class="timeline-date">Dec 6, 2025 - Jan 6, 2026</div>
                                 <div class="timeline-status upcoming">Upcoming</div>
                             </div>
                         </div>
@@ -1191,17 +1191,17 @@
     {
         "delivery": "Chat Service",
         "team": "Backend",
-        "status": "Done"
+        "status": "Backlog"
     },
     {
         "delivery": "File Upload Service",
         "team": "Backend",
-        "status": "Done"
+        "status": "Backlog"
     },
     {
         "delivery": "Event/Activity Service",
         "team": "Backend",
-        "status": "Done"
+        "status": "Backlog"
     },
     {
         "delivery": "Promotion/Coupon Service",
@@ -1392,7 +1392,7 @@
         // Timeline phases
         const phaseDeliverables = {
             phase1: {
-                title: "Phase 1: Foundation & Planning",
+                title: "Phase 1: Foundation & Planning (Sep 6 - Oct 5, 2025)",
                 description: "Project setup, design foundation, and initial backend services",
                 deliverables: [
                     "Logo & Identity",
@@ -1411,7 +1411,7 @@
                 ]
             },
             phase2: {
-                title: "Phase 2: Complete UI/UX Design System & Core Mobile",
+                title: "Phase 2: Complete UI/UX Design System & Core Mobile (Oct 6 - Nov 5, 2025)",
                 description: "Essential mobile screens and user authentication",
                 deliverables: [
                     "Login & Onboarding Screen",
@@ -1422,7 +1422,7 @@
                 ]
             },
             phase3: {
-                title: "Phase 3: Features & Services",
+                title: "Phase 3: Features & Services (Nov 6 - Dec 5, 2025)",
                 description: "Core e-commerce features and backend services",
                 deliverables: [
                     "Product Catalog & Details",
@@ -1445,7 +1445,7 @@
                 ]
             },
             phase4: {
-                title: "Phase 4: CMS & Launch",
+                title: "Phase 4: CMS & Launch (Dec 6, 2025 - Jan 6, 2026)",
                 description: "Admin panel, analytics, and final deployment",
                 deliverables: [
                     "CMS Core Foundation",
