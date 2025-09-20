@@ -195,12 +195,7 @@
         "status": "Backlog"
     },
     {
-        "delivery": "Android App (Kotlin)",
-        "team": "Mobile",
-        "status": "Backlog"
-    },
-    {
-        "delivery": "iOS App (SwiftUI)",
+        "delivery": "Flutter Mobile App",
         "team": "Mobile",
         "status": "Backlog"
     },
