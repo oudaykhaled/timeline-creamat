@@ -1,4 +1,4 @@
-[
+        const deliverables = [
     {
         "delivery": "Logo & Identity",
         "team": "UI/UX",
@@ -7,7 +7,7 @@
     {
         "delivery": "Low Fidelity Wireframes",
         "team": "UI/UX",
-        "status": "Backlog"
+        "status": "Done"
     },
     {
         "delivery": "Mid Fidelity Prototypes",
@@ -195,7 +195,7 @@
         "status": "Backlog"
     },
     {
-        "delivery": "Mobile App Core Framework "Flutter Mobile App" Navigation",
+        "delivery": "Mobile App Core Framework & Navigation",
         "team": "Mobile",
         "status": "Backlog"
     },
@@ -264,4 +264,4 @@
         "team": "CMS",
         "status": "Backlog"
     }
-]
+];

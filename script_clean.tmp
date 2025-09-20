@@ -1,0 +1,195 @@
+        // Timeline phases
+        const phaseDeliverables = {
+            phase1: {
+                title: "Phase 1: Foundation & Planning",
+                description: "Project setup, design foundation, and initial backend services",
+                deliverables: [
+                    "Logo & Identity",
+                    "API Gateway/BFF Service",
+                    "Auth/Identity Service",
+                    "User/Profile Service",
+                    "Catalog Service",
+                    "Media/Asset Service",
+                    "Inventory Service",
+                    "Pricing Service",
+                    "Payment Gateway Service",
+                    "Notification Service",
+                    "Chat Service",
+                    "File Upload Service",
+                    "Event/Activity Service"
+                ]
+            },
+            phase2: {
+                title: "Phase 2: Complete UI/UX Design System & Core Mobile",
+                description: "Complete UI/UX design system and core mobile screens",
+                deliverables: [
+                    "Login & Onboarding Screen",
+                    "App Walkthrough/Tutorial",
+                    "Home Screen",
+                    "Mobile App Core Framework & Navigation",
+                    "Low Fidelity Wireframes",
+                    "Mid Fidelity Prototypes",
+                    "High Fidelity Designs"
+                ]
+            },
+            phase3: {
+                title: "Phase 3: Features & Services",
+                description: "Core e-commerce features and backend services",
+                deliverables: [
+                    "Product Catalog & Details",
+                    "Shopping Cart & Checkout",
+                    "User Profile & Orders",
+                    "Product Reviews & Ratings",
+                    "Customer Support Chat",
+                    "AI Face Scanner",
+                    "Promotion/Coupon Service",
+                    "Recommendation Service",
+                    "Review/Ratings Service",
+                    "Wishlist Service",
+                    "Cart Service",
+                    "Checkout/Order Service",
+                    "Loyalty Service",
+                    "Search Service",
+                    "Chat Bot Service",
+                    "Shipping/Fulfillment Service",
+                    "AI Face Scanner Service"
+                ]
+            },
+            phase4: {
+                title: "Phase 4: CMS & Launch",
+                description: "Admin panel, analytics, and final deployment",
+                deliverables: [
+                    "CMS Core Foundation",
+                    "CMS Inventory Management",
+                    "CMS Reports & Analytics",
+                    "CMS Advanced Features",
+                    "Product Catalog Management",
+                    "Stock Management Dashboard",
+                    "Sales Analytics Dashboard",
+                    "Customer Analytics Dashboard",
+                    "AI Face Scanner Analytics",
+                    "Content Management Tools",
+                    "Marketing Campaign Tools",
+                    "User Management Interface",
+                    "System Configuration Panel",
+                    "CMS/Content Service",
+                    "Admin API Service",
+                    "Analytics/Reporting Service"
+                ]
+            }
+        };
+
+        let currentFilter = 'all';
+        let searchTerm = '';
+
+        function renderDeliverables() {
+            const grid = document.getElementById('deliverables-grid');
+            if (!grid || !Array.isArray(deliverables)) return;
+            const filtered = deliverables.filter(item => {
+                const matchesFilter = currentFilter === 'all' || item.team === currentFilter;
+                const s = searchTerm.toLowerCase();
+                const matchesSearch = !s || item.delivery.toLowerCase().includes(s) || item.team.toLowerCase().includes(s);
+                return matchesFilter && matchesSearch;
+            });
+            grid.innerHTML = filtered.map(item => `
+                <div class="deliverable-card ${item.team.toLowerCase().replace('/', '-')}">
+                    <div class="deliverable-title">${item.delivery}</div>
+                    <div class="deliverable-team">Team: ${item.team}</div>
+                    <span class="status-badge status-${item.status.toLowerCase()}">${item.status}</span>
+                </div>
+            `).join('');
+        }
+
+        function filterDeliverables(team) {
+            currentFilter = team;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            if (window.event && window.event.target) {
+                window.event.target.classList.add('active');
+            }
+            renderDeliverables();
+        }
+
+        function setupSearch() {
+            const input = document.getElementById('search-input');
+            if (!input) return;
+            input.addEventListener('input', e => {
+                searchTerm = e.target.value;
+                renderDeliverables();
+            });
+        }
+
+        function updateStats() {
+            const stats = deliverables.reduce((acc, item) => {
+                acc[item.team] = (acc[item.team] || 0) + 1;
+                acc.total++;
+                const status = (item.status || '').toLowerCase();
+                if (status === 'done') acc.done++;
+                else if (status === 'available') acc.available++;
+                else if (status === 'backlog') acc.backlog++;
+                if (status === 'done' || status === 'available') acc.ready++;
+                return acc;
+            }, { total: 0, done: 0, available: 0, backlog: 0, ready: 0 });
+            const readyPct = stats.total ? Math.round((stats.ready / stats.total) * 100) : 0;
+            const fill = document.getElementById('progress-fill');
+            if (fill) {
+                fill.style.width = readyPct + '%';
+                fill.textContent = `${readyPct}% Ready (${stats.ready}/${stats.total})`;
+            }
+            const setNum = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+            setNum('total-deliverables', stats.total);
+            setNum('done-count', stats.done);
+            setNum('available-count', stats.available);
+            setNum('backlog-count', stats.backlog);
+            const cr = document.getElementById('completion-rate');
+            if (cr) cr.textContent = readyPct + '%';
+        }
+
+        function openDeliverableModal(phaseId) {
+            const phase = phaseDeliverables[phaseId];
+            if (!phase) return;
+            const modal = document.getElementById('deliverableModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            if (!modal || !modalTitle || !modalBody) return;
+            modalTitle.textContent = phase.title;
+            const phaseItems = deliverables.filter(item => phase.deliverables.includes(item.delivery));
+            modalBody.innerHTML = `
+                <p style="color:#666;margin-bottom:20px;font-style:italic;">${phase.description}</p>
+                <div class="deliverable-list">
+                    ${phaseItems.map(item => `
+                        <div class="deliverable-item ${item.team.toLowerCase().replace('/', '-')}">
+                            <div class="deliverable-item-title">${item.delivery}</div>
+                            <div class="deliverable-item-team">Team: ${item.team}</div>
+                            <span class="status-badge status-${item.status.toLowerCase()}">${item.status}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                <div style="margin-top:20px;padding:15px;background:#f8f9fa;border-radius:8px;">
+                    <strong>Phase Summary:</strong><br>
+                    Total Items: ${phaseItems.length}<br>
+                    Done: ${phaseItems.filter(i => i.status === 'Done').length}<br>
+                    Backlog: ${phaseItems.filter(i => i.status === 'Backlog').length}
+                </div>
+            `;
+            modal.style.display = 'block';
+        }
+
+        function closeDeliverableModal() {
+            const modal = document.getElementById('deliverableModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('deliverableModal');
+            if (modal && e.target === modal) closeDeliverableModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDeliverableModal();
+        });
+
+        function initDashboard() {
+            renderDeliverables();
+            setupSearch();
+            updateStats();
+        }
+        document.addEventListener('DOMContentLoaded', initDashboard);
