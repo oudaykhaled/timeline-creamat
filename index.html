@@ -276,6 +276,248 @@
             font-weight: bold;
             color: #ff6b6b;
         }
+
+        /* Timeline Styles */
+        .timeline-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .timeline-container {
+            position: relative;
+            margin: 30px 0;
+            padding: 20px 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
+            border-radius: 2px;
+            transform: translateY(-50%);
+        }
+
+        .timeline-items {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            max-width: 200px;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.2);
+        }
+
+        .timeline-item.completed .timeline-dot {
+            box-shadow: 0 0 0 3px #2ecc71;
+            background: #2ecc71;
+        }
+
+        .timeline-item.current .timeline-dot {
+            box-shadow: 0 0 0 3px #f39c12;
+            background: #f39c12;
+            animation: pulse 2s infinite;
+        }
+
+        .timeline-item.upcoming .timeline-dot {
+            box-shadow: 0 0 0 3px #95a5a6;
+            background: #95a5a6;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .timeline-content {
+            text-align: center;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .timeline-date {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .timeline-status {
+            font-size: 0.7em;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .timeline-status.completed {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .timeline-status.current {
+            background: #f39c12;
+            color: white;
+        }
+
+        .timeline-status.upcoming {
+            background: #95a5a6;
+            color: white;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .modal-title {
+            font-size: 1.5em;
+            color: #333;
+            margin: 0;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #ff6b6b;
+        }
+
+        .deliverable-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .deliverable-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+
+        .deliverable-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .deliverable-item.ui-ux { border-left-color: #ff6b6b; }
+        .deliverable-item.backend { border-left-color: #4ecdc4; }
+        .deliverable-item.mobile { border-left-color: #45b7d1; }
+        .deliverable-item.cms { border-left-color: #f9ca24; }
+
+        .deliverable-item-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .deliverable-item-team {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-items {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .timeline-line {
+                left: 50%;
+                right: auto;
+                width: 4px;
+                height: 100%;
+                top: 0;
+                transform: translateX(-50%);
+                background: linear-gradient(180deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24);
+            }
+            
+            .timeline-item {
+                max-width: none;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -337,6 +579,53 @@
                 </div>
             </div>
 
+            <!-- Timeline Section -->
+            <div class="timeline-section">
+                <h2 class="section-title">📅 Project Timeline</h2>
+                <p style="color: #666; margin-bottom: 20px;">4-month project timeline • Started 2 weeks ago • Next mobile delivery in 2 weeks</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-items">
+                        <div class="timeline-item completed" onclick="openDeliverableModal('phase1')">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Phase 1: Foundation</div>
+                                <div class="timeline-date">Week 1-2</div>
+                                <div class="timeline-status completed">Completed</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item current" onclick="openDeliverableModal('phase2')">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Phase 2: Core Mobile</div>
+                                <div class="timeline-date">Week 3-4</div>
+                                <div class="timeline-status current">In Progress</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item upcoming" onclick="openDeliverableModal('phase3')">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Phase 3: Features</div>
+                                <div class="timeline-date">Week 5-12</div>
+                                <div class="timeline-status upcoming">Upcoming</div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item upcoming" onclick="openDeliverableModal('phase4')">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Phase 4: Launch</div>
+                                <div class="timeline-date">Week 13-16</div>
+                                <div class="timeline-status upcoming">Upcoming</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Deliverables Section -->
             <div class="deliverables-section">
                 <h2 class="section-title">Project Deliverables</h2>
@@ -356,6 +645,19 @@
                 <div class="deliverables-grid" id="deliverables-grid">
                     <!-- Deliverables will be populated by JavaScript -->
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Deliverable Details -->
+    <div id="deliverableModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Phase Details</h2>
+                <span class="close" onclick="closeDeliverableModal()">&times;</span>
+            </div>
+            <div id="modalBody" class="deliverable-list">
+                <!-- Content will be populated by JavaScript -->
             </div>
         </div>
     </div>
@@ -724,6 +1026,133 @@
             progressFill.style.width = readyPercentage + '%';
             progressFill.textContent = `${readyPercentage}% Ready (${stats.ready}/${stats.total})`;
         }
+
+        // Timeline and Modal Functions
+        const phaseDeliverables = {
+            phase1: {
+                title: "Phase 1: Foundation & Planning",
+                description: "Project setup, design foundation, and initial backend services",
+                deliverables: [
+                    "Logo & Identity"
+                ]
+            },
+            phase2: {
+                title: "Phase 2: Core Mobile App",
+                description: "Essential mobile screens and user authentication",
+                deliverables: [
+                    "Login & Onboarding Screen",
+                    "App Walkthrough/Tutorial", 
+                    "Home Screen",
+                    "Android App (Kotlin)",
+                    "iOS App (SwiftUI)"
+                ]
+            },
+            phase3: {
+                title: "Phase 3: Features & Services",
+                description: "Core e-commerce features and backend services",
+                deliverables: [
+                    "Product Catalog & Details",
+                    "Shopping Cart & Checkout",
+                    "User Profile & Orders",
+                    "Product Reviews & Ratings",
+                    "Customer Support Chat",
+                    "AI Face Scanner",
+                    "Low Fidelity Wireframes",
+                    "Mid Fidelity Prototypes",
+                    "High Fidelity Designs",
+                    "Promotion/Coupon Service",
+                    "Recommendation Service",
+                    "Review/Ratings Service",
+                    "Wishlist Service",
+                    "Cart Service",
+                    "Checkout/Order Service",
+                    "Loyalty Service",
+                    "Search Service",
+                    "Chat Bot Service",
+                    "Shipping/Fulfillment Service",
+                    "AI Face Scanner Service"
+                ]
+            },
+            phase4: {
+                title: "Phase 4: CMS & Launch",
+                description: "Admin panel, analytics, and final deployment",
+                deliverables: [
+                    "CMS Core Foundation",
+                    "CMS Inventory Management", 
+                    "CMS Reports & Analytics",
+                    "CMS Advanced Features",
+                    "Product Catalog Management",
+                    "Stock Management Dashboard",
+                    "Sales Analytics Dashboard",
+                    "Customer Analytics Dashboard",
+                    "AI Face Scanner Analytics",
+                    "Content Management Tools",
+                    "Marketing Campaign Tools",
+                    "User Management Interface",
+                    "System Configuration Panel",
+                    "CMS/Content Service",
+                    "Admin API Service",
+                    "Analytics/Reporting Service"
+                ]
+            }
+        };
+
+        function openDeliverableModal(phaseId) {
+            const phase = phaseDeliverables[phaseId];
+            if (!phase) return;
+
+            const modal = document.getElementById('deliverableModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+
+            modalTitle.textContent = phase.title;
+            
+            // Filter deliverables for this phase
+            const phaseItems = deliverables.filter(item => 
+                phase.deliverables.includes(item.delivery)
+            );
+
+            modalBody.innerHTML = `
+                <p style="color: #666; margin-bottom: 20px; font-style: italic;">${phase.description}</p>
+                <div class="deliverable-list">
+                    ${phaseItems.map(item => `
+                        <div class="deliverable-item ${item.team.toLowerCase().replace('/', '-')}">
+                            <div class="deliverable-item-title">${item.delivery}</div>
+                            <div class="deliverable-item-team">Team: ${item.team}</div>
+                            <span class="status-badge status-${item.status.toLowerCase()}">${item.status}</span>
+                        </div>
+                    `).join('')}
+                </div>
+                <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                    <strong>Phase Summary:</strong><br>
+                    Total Items: ${phaseItems.length}<br>
+                    Done: ${phaseItems.filter(i => i.status === 'Done').length}<br>
+                    Backlog: ${phaseItems.filter(i => i.status === 'Backlog').length}
+                </div>
+            `;
+
+            modal.style.display = 'block';
+        }
+
+        function closeDeliverableModal() {
+            const modal = document.getElementById('deliverableModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('deliverableModal');
+            if (event.target === modal) {
+                closeDeliverableModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeDeliverableModal();
+            }
+        });
 
 
         // Initialize dashboard when page loads
